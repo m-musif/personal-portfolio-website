@@ -9,27 +9,16 @@ function App() {
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-            <a href="#about" className="transition hover:text-cyan-400">
-              About
-            </a>
-            <a href="#skills" className="transition hover:text-cyan-400">
-              Skills
-            </a>
-            <a href="#projects" className="transition hover:text-cyan-400">
-              Projects
-            </a>
-            <a href="#contact" className="transition hover:text-cyan-400">
-              Contact
-            </a>
+            <a href="#about" className="transition hover:text-cyan-400">About</a>
+            <a href="#skills" className="transition hover:text-cyan-400">Skills</a>
+            <a href="#projects" className="transition hover:text-cyan-400">Projects</a>
+            <a href="#contact" className="transition hover:text-cyan-400">Contact</a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section
-        id="home"
-        className="flex min-h-screen items-center justify-center px-6"
-      >
+      <section id="home" className="flex min-h-screen items-center justify-center px-6">
         <div className="max-w-4xl text-center">
           <p className="mb-4 text-lg text-cyan-400">
             Computer Science Student @ FAST University
@@ -91,9 +80,7 @@ function App() {
             <div className="grid gap-4">
               <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
                 <h3 className="text-2xl font-bold text-cyan-400">6+</h3>
-                <p className="text-slate-300">
-                  AI and software projects built
-                </p>
+                <p className="text-slate-300">AI and software projects built</p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
@@ -114,10 +101,74 @@ function App() {
         </div>
       </section>
 
-      {/* Placeholder Sections */}
+      {/* Skills Section */}
       <section id="skills" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold">Skills section coming next...</h2>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
+            Skills
+          </p>
+
+          <h2 className="mb-12 text-3xl font-bold md:text-5xl">
+            Technologies I work with
+          </h2>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Programming Languages",
+                skills: ["Python", "JavaScript", "C", "C++", "SQL"],
+              },
+              {
+                title: "AI & Machine Learning",
+                skills: [
+                  "Machine Learning",
+                  "YOLOv8",
+                  "Computer Vision",
+                  "RAG",
+                  "FAISS",
+                  "Multi-Agent AI",
+                  "Scikit-Learn",
+                  "Prompt Engineering",
+                ],
+              },
+              {
+                title: "Frontend Development",
+                skills: ["React", "Vite", "Tailwind CSS", "HTML5", "CSS3"],
+              },
+              {
+                title: "Backend Development",
+                skills: ["FastAPI", "REST APIs", "Groq API", "Python Backend"],
+              },
+              {
+                title: "Databases",
+                skills: ["PostgreSQL", "SQLite", "FAISS", "JSON Storage"],
+              },
+              {
+                title: "Tools & Platforms",
+                skills: ["Git", "GitHub", "GitHub Actions", "Linux", "Google Colab"],
+              },
+            ].map((category) => (
+              <div
+                key={category.title}
+                className="rounded-2xl border border-white/10 bg-white/5 p-6"
+              >
+                <h3 className="mb-4 text-xl font-bold text-cyan-400">
+                  {category.title}
+                </h3>
+
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full bg-slate-800 px-3 py-1 text-sm text-slate-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
