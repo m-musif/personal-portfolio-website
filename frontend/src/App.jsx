@@ -1,7 +1,80 @@
 function App() {
+  const skillCategories = [
+    {
+      title: "Programming Languages",
+      skills: ["Python", "JavaScript", "C", "C++", "SQL"],
+    },
+    {
+      title: "AI & Machine Learning",
+      skills: [
+        "Machine Learning",
+        "YOLOv8",
+        "Computer Vision",
+        "RAG",
+        "FAISS",
+        "Multi-Agent AI",
+        "Scikit-Learn",
+        "Prompt Engineering",
+      ],
+    },
+    {
+      title: "Frontend Development",
+      skills: ["React", "Vite", "Tailwind CSS", "HTML5", "CSS3"],
+    },
+    {
+      title: "Backend Development",
+      skills: ["FastAPI", "REST APIs", "Groq API", "Python Backend"],
+    },
+    {
+      title: "Databases",
+      skills: ["PostgreSQL", "SQLite", "FAISS", "JSON Storage"],
+    },
+    {
+      title: "Tools & Platforms",
+      skills: ["Git", "GitHub", "GitHub Actions", "Linux", "Google Colab"],
+    },
+  ];
+
+  const projects = [
+    {
+      title: "AI Solar Panel Defect Detection",
+      description:
+        "YOLOv8-based computer vision system for detecting defects in solar panels.",
+      tech: "YOLOv8 • FastAPI • React",
+    },
+    {
+      title: "Multi-Agent AI Career Assistant",
+      description:
+        "Multi-agent assistant for career guidance, research, and memory management.",
+      tech: "FastAPI • React • Groq",
+    },
+    {
+      title: "AI Document Search RAG Chatbot",
+      description:
+        "Upload PDFs and ask questions using Retrieval-Augmented Generation.",
+      tech: "RAG • FAISS • FastAPI",
+    },
+    {
+      title: "SafeCity PK",
+      description:
+        "Crime Analytics and Risk Intelligence platform with database-first architecture.",
+      tech: "FastAPI • PostgreSQL • React",
+    },
+    {
+      title: "AI Code Review Bot",
+      description:
+        "Automated pull request review system using GitHub Actions and LLMs.",
+      tech: "GitHub Actions • Groq • Python",
+    },
+    {
+      title: "PsychCareAI",
+      description: "AI-powered mental health analysis and support platform.",
+      tech: "Python • AI • Analytics",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      {/* Navbar */}
       <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#home" className="text-xl font-bold text-white">
@@ -9,16 +82,26 @@ function App() {
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-            <a href="#about" className="transition hover:text-cyan-400">About</a>
-            <a href="#skills" className="transition hover:text-cyan-400">Skills</a>
-            <a href="#projects" className="transition hover:text-cyan-400">Projects</a>
-            <a href="#contact" className="transition hover:text-cyan-400">Contact</a>
+            <a href="#about" className="transition hover:text-cyan-400">
+              About
+            </a>
+            <a href="#skills" className="transition hover:text-cyan-400">
+              Skills
+            </a>
+            <a href="#projects" className="transition hover:text-cyan-400">
+              Projects
+            </a>
+            <a href="#contact" className="transition hover:text-cyan-400">
+              Contact
+            </a>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="flex min-h-screen items-center justify-center px-6">
+      <section
+        id="home"
+        className="flex min-h-screen items-center justify-center px-6"
+      >
         <div className="max-w-4xl text-center">
           <p className="mb-4 text-lg text-cyan-400">
             Computer Science Student @ FAST University
@@ -55,7 +138,6 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
@@ -101,7 +183,6 @@ function App() {
         </div>
       </section>
 
-      {/* Skills Section */}
       <section id="skills" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
@@ -113,41 +194,7 @@ function App() {
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Programming Languages",
-                skills: ["Python", "JavaScript", "C", "C++", "SQL"],
-              },
-              {
-                title: "AI & Machine Learning",
-                skills: [
-                  "Machine Learning",
-                  "YOLOv8",
-                  "Computer Vision",
-                  "RAG",
-                  "FAISS",
-                  "Multi-Agent AI",
-                  "Scikit-Learn",
-                  "Prompt Engineering",
-                ],
-              },
-              {
-                title: "Frontend Development",
-                skills: ["React", "Vite", "Tailwind CSS", "HTML5", "CSS3"],
-              },
-              {
-                title: "Backend Development",
-                skills: ["FastAPI", "REST APIs", "Groq API", "Python Backend"],
-              },
-              {
-                title: "Databases",
-                skills: ["PostgreSQL", "SQLite", "FAISS", "JSON Storage"],
-              },
-              {
-                title: "Tools & Platforms",
-                skills: ["Git", "GitHub", "GitHub Actions", "Linux", "Google Colab"],
-              },
-            ].map((category) => (
+            {skillCategories.map((category) => (
               <div
                 key={category.title}
                 className="rounded-2xl border border-white/10 bg-white/5 p-6"
@@ -174,13 +221,88 @@ function App() {
 
       <section id="projects" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold">Projects section coming next...</h2>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
+            Projects
+          </p>
+
+          <h2 className="mb-12 text-3xl font-bold md:text-5xl">
+            Featured Projects
+          </h2>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {projects.map((project) => (
+              <div
+                key={project.title}
+                className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-400"
+              >
+                <h3 className="mb-3 text-xl font-bold text-white">
+                  {project.title}
+                </h3>
+
+                <p className="mb-4 text-slate-400">{project.description}</p>
+
+                <p className="text-sm text-cyan-400">{project.tech}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section id="contact" className="px-6 py-24">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold">Contact section coming next...</h2>
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
+            Contact
+          </p>
+
+          <h2 className="mb-6 text-3xl font-bold md:text-5xl">
+            Let's Build Something Amazing
+          </h2>
+
+          <p className="mb-10 text-slate-400">
+            Interested in AI, Machine Learning, internships, hackathons,
+            research, or collaboration opportunities? Feel free to connect with
+            me.
+          </p>
+
+          <div className="mb-10 space-y-3 text-slate-300">
+            <p>📧 muhammadmusif134@gmail.com</p>
+            <p>📱 +92 328 5077456</p>
+            <p>📍 Pakistan</p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="mailto:muhammadmusif134@gmail.com"
+              className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-black transition hover:bg-cyan-400"
+            >
+              Email Me
+            </a>
+
+            <a
+              href="tel:+923285077456"
+              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
+            >
+              Call Me
+            </a>
+
+            <a
+              href="https://github.com/m-musif"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/muhammad-musif-b62732331/"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       </section>
     </div>
