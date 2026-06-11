@@ -4,6 +4,8 @@ import multiAgentImage from "./assets/projects/multi-agent-memory.png";
 import codeReviewImage from "./assets/projects/code-review-workflow.png";
 
 function App() {
+  const resumePath = "/Muhammad_Musif_RESUME.docx";
+
   const skillCategories = [
     {
       title: "Programming Languages",
@@ -124,6 +126,10 @@ function App() {
 
             <a href="#contact" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
               Contact Me
+            </a>
+
+            <a href={resumePath} target="_blank" rel="noreferrer" className="rounded-lg border border-cyan-500 px-6 py-3 font-semibold text-cyan-400 transition hover:bg-cyan-500 hover:text-black">
+              Resume
             </a>
 
             <a href="https://github.com/m-musif" target="_blank" rel="noreferrer" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
@@ -328,6 +334,10 @@ function App() {
 
             <a href="tel:+923285077456" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
               Call Me
+            </a>
+
+            <a href={resumePath} target="_blank" rel="noreferrer" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
+              Resume
             </a>
 
             <a href="https://github.com/m-musif" target="_blank" rel="noreferrer" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
