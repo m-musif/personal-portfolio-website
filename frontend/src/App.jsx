@@ -1,3 +1,8 @@
+import solarImage from "./assets/projects/detection-results.png";
+import ragImage from "./assets/projects/answer.png";
+import multiAgentImage from "./assets/projects/multi-agent-memory.png";
+import codeReviewImage from "./assets/projects/code-review-workflow.png";
+
 function App() {
   const skillCategories = [
     {
@@ -39,37 +44,39 @@ function App() {
     {
       title: "AI Solar Panel Defect Detection",
       description:
-        "YOLOv8-based computer vision system for detecting defects in solar panels.",
-      tech: "YOLOv8 • FastAPI • React",
+        "YOLOv8-based computer vision system for detecting defects in solar panels with a FastAPI backend and React frontend.",
+      tech: ["YOLOv8", "FastAPI", "React", "Computer Vision"],
+      image: solarImage,
+      github: "https://github.com/m-musif/AI-Solar-Panel-Defect-Detection",
+      badge: "Featured",
     },
     {
       title: "Multi-Agent AI Career Assistant",
       description:
-        "Multi-agent assistant for career guidance, research, and memory management.",
-      tech: "FastAPI • React • Groq",
+        "Multi-agent assistant for career guidance, research, memory, and AI-powered recommendations.",
+      tech: ["FastAPI", "React", "Groq", "Multi-Agent AI"],
+      image: multiAgentImage,
+      github:
+        "https://github.com/m-musif/Multi-Agent-AI-Career-Research-Assistant",
+      badge: "Featured",
     },
     {
       title: "AI Document Search RAG Chatbot",
       description:
-        "Upload PDFs and ask questions using Retrieval-Augmented Generation.",
-      tech: "RAG • FAISS • FastAPI",
-    },
-    {
-      title: "SafeCity PK",
-      description:
-        "Crime Analytics and Risk Intelligence platform with database-first architecture.",
-      tech: "FastAPI • PostgreSQL • React",
+        "A RAG-based chatbot that lets users upload PDFs and ask questions with source-grounded answers.",
+      tech: ["RAG", "FAISS", "FastAPI", "React"],
+      image: ragImage,
+      github: "https://github.com/m-musif/AI-Document-Search-RAG-Chatbot",
+      badge: "Featured",
     },
     {
       title: "AI Code Review Bot",
       description:
-        "Automated pull request review system using GitHub Actions and LLMs.",
-      tech: "GitHub Actions • Groq • Python",
-    },
-    {
-      title: "PsychCareAI",
-      description: "AI-powered mental health analysis and support platform.",
-      tech: "Python • AI • Analytics",
+        "GitHub Actions bot that analyzes pull request diffs and generates AI-powered review feedback.",
+      tech: ["GitHub Actions", "Groq", "Python", "Automation"],
+      image: codeReviewImage,
+      github: "https://github.com/m-musif/AI-Code-Review-Bot",
+      badge: "Automation",
     },
   ];
 
@@ -82,16 +89,29 @@ function App() {
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-            <a href="#about" className="transition hover:text-cyan-400">About</a>
-            <a href="#skills" className="transition hover:text-cyan-400">Skills</a>
-            <a href="#projects" className="transition hover:text-cyan-400">Projects</a>
-            <a href="#education" className="transition hover:text-cyan-400">Education</a>
-            <a href="#contact" className="transition hover:text-cyan-400">Contact</a>
+            <a href="#about" className="transition hover:text-cyan-400">
+              About
+            </a>
+            <a href="#skills" className="transition hover:text-cyan-400">
+              Skills
+            </a>
+            <a href="#projects" className="transition hover:text-cyan-400">
+              Projects
+            </a>
+            <a href="#education" className="transition hover:text-cyan-400">
+              Education
+            </a>
+            <a href="#contact" className="transition hover:text-cyan-400">
+              Contact
+            </a>
           </div>
         </div>
       </nav>
 
-      <section id="home" className="flex min-h-screen items-center justify-center px-6">
+      <section
+        id="home"
+        className="flex min-h-screen items-center justify-center px-6"
+      >
         <div className="max-w-4xl text-center">
           <p className="mb-4 text-lg text-cyan-400">
             Computer Science Student @ FAST University
@@ -111,11 +131,17 @@ function App() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="#projects" className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-black transition hover:bg-cyan-400">
+            <a
+              href="#projects"
+              className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-black transition hover:bg-cyan-400"
+            >
               View Projects
             </a>
 
-            <a href="#contact" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
+            <a
+              href="#contact"
+              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
+            >
               Contact Me
             </a>
           </div>
@@ -179,14 +205,20 @@ function App() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {skillCategories.map((category) => (
-              <div key={category.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <div
+                key={category.title}
+                className="rounded-2xl border border-white/10 bg-white/5 p-6"
+              >
                 <h3 className="mb-4 text-xl font-bold text-cyan-400">
                   {category.title}
                 </h3>
 
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
-                    <span key={skill} className="rounded-full bg-slate-800 px-3 py-1 text-sm text-slate-200">
+                    <span
+                      key={skill}
+                      className="rounded-full bg-slate-800 px-3 py-1 text-sm text-slate-200"
+                    >
                       {skill}
                     </span>
                   ))}
@@ -207,15 +239,53 @@ function App() {
             Featured Projects
           </h2>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2">
             {projects.map((project) => (
-              <div key={project.title} className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-400">
-                <h3 className="mb-3 text-xl font-bold text-white">
-                  {project.title}
-                </h3>
+              <div
+                key={project.title}
+                className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-cyan-400"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-56 w-full object-cover"
+                />
 
-                <p className="mb-4 text-slate-400">{project.description}</p>
-                <p className="text-sm text-cyan-400">{project.tech}</p>
+                <div className="p-6">
+                  <div className="mb-3 flex items-center justify-between gap-3">
+                    <h3 className="text-xl font-bold text-white">
+                      {project.title}
+                    </h3>
+
+                    <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-semibold text-cyan-400">
+                      {project.badge}
+                    </span>
+                  </div>
+
+                  <p className="mb-4 text-slate-400">
+                    {project.description}
+                  </p>
+
+                  <div className="mb-6 flex flex-wrap gap-2">
+                    {project.tech.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-200"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-block rounded-lg border border-slate-600 px-5 py-2 text-sm font-semibold transition hover:border-cyan-400"
+                  >
+                    View GitHub
+                  </a>
+                </div>
               </div>
             ))}
           </div>
@@ -233,21 +303,31 @@ function App() {
           </h2>
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
-            <h3 className="text-2xl font-bold text-white">BS Computer Science</h3>
+            <h3 className="text-2xl font-bold text-white">
+              BS Computer Science
+            </h3>
 
             <p className="mt-2 text-cyan-400">
               FAST National University of Computer & Emerging Sciences
             </p>
 
             <p className="mt-4 text-slate-300">
-              Currently completed 4 semesters. Focused on Artificial Intelligence,
-              Machine Learning, Software Engineering, Data Structures & Algorithms,
-              Databases, and Full-Stack Development.
+              Currently completed 4 semesters. Focused on Artificial
+              Intelligence, Machine Learning, Software Engineering, Data
+              Structures & Algorithms, Databases, and Full-Stack Development.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              {["Computer Science", "Artificial Intelligence", "Machine Learning", "Software Engineering"].map((item) => (
-                <span key={item} className="rounded-full bg-slate-800 px-4 py-2 text-sm">
+              {[
+                "Computer Science",
+                "Artificial Intelligence",
+                "Machine Learning",
+                "Software Engineering",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full bg-slate-800 px-4 py-2 text-sm"
+                >
                   {item}
                 </span>
               ))}
@@ -279,19 +359,35 @@ function App() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="mailto:muhammadmusif134@gmail.com" className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-black transition hover:bg-cyan-400">
+            <a
+              href="mailto:muhammadmusif134@gmail.com"
+              className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-black transition hover:bg-cyan-400"
+            >
               Email Me
             </a>
 
-            <a href="tel:+923285077456" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
+            <a
+              href="tel:+923285077456"
+              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
+            >
               Call Me
             </a>
 
-            <a href="https://github.com/m-musif" target="_blank" rel="noreferrer" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
+            <a
+              href="https://github.com/m-musif"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
+            >
               GitHub
             </a>
 
-            <a href="https://www.linkedin.com/in/muhammad-musif-b62732331/" target="_blank" rel="noreferrer" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
+            <a
+              href="https://www.linkedin.com/in/muhammad-musif-b62732331/"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
+            >
               LinkedIn
             </a>
           </div>
@@ -301,7 +397,8 @@ function App() {
       <footer className="border-t border-white/10 py-8">
         <div className="mx-auto max-w-6xl px-6 text-center text-slate-400">
           <p>
-            © 2026 Muhammad Musif. Built with React, Tailwind CSS, and AI-focused ambition.
+            © 2026 Muhammad Musif. Built with React, Tailwind CSS, and
+            AI-focused ambition.
           </p>
         </div>
       </footer>
