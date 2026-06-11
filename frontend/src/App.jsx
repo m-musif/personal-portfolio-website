@@ -82,26 +82,16 @@ function App() {
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-            <a href="#about" className="transition hover:text-cyan-400">
-              About
-            </a>
-            <a href="#skills" className="transition hover:text-cyan-400">
-              Skills
-            </a>
-            <a href="#projects" className="transition hover:text-cyan-400">
-              Projects
-            </a>
-            <a href="#contact" className="transition hover:text-cyan-400">
-              Contact
-            </a>
+            <a href="#about" className="transition hover:text-cyan-400">About</a>
+            <a href="#skills" className="transition hover:text-cyan-400">Skills</a>
+            <a href="#projects" className="transition hover:text-cyan-400">Projects</a>
+            <a href="#education" className="transition hover:text-cyan-400">Education</a>
+            <a href="#contact" className="transition hover:text-cyan-400">Contact</a>
           </div>
         </div>
       </nav>
 
-      <section
-        id="home"
-        className="flex min-h-screen items-center justify-center px-6"
-      >
+      <section id="home" className="flex min-h-screen items-center justify-center px-6">
         <div className="max-w-4xl text-center">
           <p className="mb-4 text-lg text-cyan-400">
             Computer Science Student @ FAST University
@@ -121,17 +111,11 @@ function App() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="#projects"
-              className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-black transition hover:bg-cyan-400"
-            >
+            <a href="#projects" className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-black transition hover:bg-cyan-400">
               View Projects
             </a>
 
-            <a
-              href="#contact"
-              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
-            >
+            <a href="#contact" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
               Contact Me
             </a>
           </div>
@@ -195,20 +179,14 @@ function App() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {skillCategories.map((category) => (
-              <div
-                key={category.title}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6"
-              >
+              <div key={category.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
                 <h3 className="mb-4 text-xl font-bold text-cyan-400">
                   {category.title}
                 </h3>
 
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full bg-slate-800 px-3 py-1 text-sm text-slate-200"
-                    >
+                    <span key={skill} className="rounded-full bg-slate-800 px-3 py-1 text-sm text-slate-200">
                       {skill}
                     </span>
                   ))}
@@ -231,19 +209,49 @@ function App() {
 
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project) => (
-              <div
-                key={project.title}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-400"
-              >
+              <div key={project.title} className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-400">
                 <h3 className="mb-3 text-xl font-bold text-white">
                   {project.title}
                 </h3>
 
                 <p className="mb-4 text-slate-400">{project.description}</p>
-
                 <p className="text-sm text-cyan-400">{project.tech}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="education" className="px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
+            Education
+          </p>
+
+          <h2 className="mb-12 text-3xl font-bold md:text-5xl">
+            Academic Journey
+          </h2>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
+            <h3 className="text-2xl font-bold text-white">BS Computer Science</h3>
+
+            <p className="mt-2 text-cyan-400">
+              FAST National University of Computer & Emerging Sciences
+            </p>
+
+            <p className="mt-4 text-slate-300">
+              Currently completed 4 semesters. Focused on Artificial Intelligence,
+              Machine Learning, Software Engineering, Data Structures & Algorithms,
+              Databases, and Full-Stack Development.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              {["Computer Science", "Artificial Intelligence", "Machine Learning", "Software Engineering"].map((item) => (
+                <span key={item} className="rounded-full bg-slate-800 px-4 py-2 text-sm">
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -271,40 +279,32 @@ function App() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:muhammadmusif134@gmail.com"
-              className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-black transition hover:bg-cyan-400"
-            >
+            <a href="mailto:muhammadmusif134@gmail.com" className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-black transition hover:bg-cyan-400">
               Email Me
             </a>
 
-            <a
-              href="tel:+923285077456"
-              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
-            >
+            <a href="tel:+923285077456" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
               Call Me
             </a>
 
-            <a
-              href="https://github.com/m-musif"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
-            >
+            <a href="https://github.com/m-musif" target="_blank" rel="noreferrer" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
               GitHub
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/muhammad-musif-b62732331/"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
-            >
+            <a href="https://www.linkedin.com/in/muhammad-musif-b62732331/" target="_blank" rel="noreferrer" className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400">
               LinkedIn
             </a>
           </div>
         </div>
       </section>
+
+      <footer className="border-t border-white/10 py-8">
+        <div className="mx-auto max-w-6xl px-6 text-center text-slate-400">
+          <p>
+            © 2026 Muhammad Musif. Built with React, Tailwind CSS, and AI-focused ambition.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
