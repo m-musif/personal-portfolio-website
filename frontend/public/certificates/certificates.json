@@ -1,0 +1,56 @@
+[
+  {
+    "id": "jp-morgan-chase-software-engineering",
+    "issuer": "JP Morgan Chase",
+    "title": "Software Engineering Job Simulation",
+    "date": "2026-06-25",
+    "platform": "Forage",
+    "skills": [
+      "Project Setup",
+      "Kafka Integration",
+      "H2 Integration",
+      "REST API Integration",
+      "REST API Controller"
+    ],
+    "enrolmentCode": "7Z5wDnp8HDQkfPKiq",
+    "userCode": "6a3cff0b3359e10d6e9f4cbe"
+  },
+  {
+    "id": "deloitte-cyber",
+    "issuer": "Deloitte",
+    "title": "Cyber Job Simulation",
+    "date": "2026-06-25",
+    "platform": "Forage",
+    "skills": ["Cyber security practical tasks"],
+    "enrolmentCode": "drkFiwjuEso4dtQoa",
+    "userCode": "6a3cff0b3359e10d6e9f4cbe"
+  },
+  {
+    "id": "walmart-advanced-software-engineering",
+    "issuer": "Walmart Global Tech",
+    "title": "Advanced Software Engineering Job Simulation",
+    "date": "2026-06-25",
+    "platform": "Forage",
+    "skills": [
+      "Advanced Data Structures",
+      "Software Architecture",
+      "Relational Database Design",
+      "Data Munging"
+    ],
+    "enrolmentCode": "Sn4RBRJ94TXhgihdC",
+    "userCode": "6a3cff0b3359e10d6e9f4cbe"
+  },
+  {
+    "id": "goldman-sachs-operations",
+    "issuer": "Goldman Sachs",
+    "title": "Operations Job Simulation",
+    "date": "2026-06-25",
+    "platform": "Forage",
+    "skills": [
+      "Foundations of operations",
+      "Facilitating ultra-high net worth transactions"
+    ],
+    "enrolmentCode": "a9nxLkRahj3rLygXd",
+    "userCode": "6a3cff0b3359e10d6e9f4cbe"
+  }
+]
