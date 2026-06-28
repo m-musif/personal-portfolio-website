@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://m-musif.github.io/personal-portfolio-website/sitemap.xml

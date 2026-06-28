@@ -1,7 +1,10 @@
 import certificates from "./data/certificates.json";
-
-const assetBase =
-  "https://raw.githubusercontent.com/m-musif/personal-portfolio-website/main/frontend/src/assets/projects";
+import pslImage from "./assets/projects/home-page.png";
+import agriImage from "./assets/projects/upload-image.png";
+import solarImage from "./assets/projects/detection-results.png";
+import multiAgentImage from "./assets/projects/multi-agent-memory.png";
+import ragImage from "./assets/projects/answer.png";
+import codeReviewImage from "./assets/projects/code-review-workflow.png";
 
 function formatDate(dateString) {
   return new Date(dateString).toLocaleDateString("en-US", {
@@ -77,7 +80,7 @@ function App() {
       description:
         "Research-grade vision-language system for Pakistan Sign Language recognition, Urdu/English translation, and contextual explanation using QLoRA fine-tuning with a Gradio demo.",
       tech: ["VLM", "PyTorch", "Gradio", "QLoRA", "Computer Vision"],
-      image: `${assetBase}/home-page.png`,
+      image: pslImage,
       github: "https://github.com/m-musif/Pakistan-PSL-VLM",
       badge: "Research",
     },
@@ -86,7 +89,7 @@ function App() {
       description:
         "Computer vision pipeline for agricultural disease detection: ResNet18 transfer learning, OpenCV preprocessing, 38 PlantVillage classes, REST API + Streamlit demo with EN/UR advisory output.",
       tech: ["PyTorch", "ResNet18", "OpenCV", "FastAPI", "Streamlit"],
-      image: `${assetBase}/upload-image.png`,
+      image: agriImage,
       github: "https://github.com/m-musif/agrivision-pk",
       badge: "Featured",
     },
@@ -95,7 +98,7 @@ function App() {
       description:
         "YOLOv8-based computer vision system for detecting defects in solar panels with a FastAPI backend and React frontend.",
       tech: ["YOLOv8", "FastAPI", "React", "Computer Vision"],
-      image: `${assetBase}/detection-results.png`,
+      image: solarImage,
       github: "https://github.com/m-musif/AI-Solar-Panel-Defect-Detection",
       badge: "Featured",
     },
@@ -104,7 +107,7 @@ function App() {
       description:
         "Multi-agent assistant for career guidance, research, memory, and AI-powered recommendations.",
       tech: ["FastAPI", "React", "Groq", "Multi-Agent AI"],
-      image: `${assetBase}/multi-agent-memory.png`,
+      image: multiAgentImage,
       github:
         "https://github.com/m-musif/Multi-Agent-AI-Career-Research-Assistant",
       badge: "Featured",
@@ -114,7 +117,7 @@ function App() {
       description:
         "A RAG-based chatbot that lets users upload PDFs and ask questions with source-grounded answers.",
       tech: ["RAG", "FAISS", "FastAPI", "React"],
-      image: `${assetBase}/answer.png`,
+      image: ragImage,
       github: "https://github.com/m-musif/AI-Document-Search-RAG-Chatbot",
       badge: "Featured",
     },
@@ -123,7 +126,7 @@ function App() {
       description:
         "GitHub Actions bot that analyzes pull request diffs and generates AI-powered review feedback.",
       tech: ["GitHub Actions", "Groq", "Python", "Automation"],
-      image: `${assetBase}/code-review-workflow.png`,
+      image: codeReviewImage,
       github: "https://github.com/m-musif/AI-Code-Review-Bot",
       badge: "Automation",
     },
@@ -146,7 +149,7 @@ function App() {
             Musif<span className="text-cyan-400">.</span>
           </a>
 
-          <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+          <div className="flex max-w-[70vw] items-center gap-3 overflow-x-auto text-xs text-slate-300 sm:max-w-none sm:flex-wrap sm:gap-4 sm:text-sm md:gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -200,8 +203,7 @@ function App() {
 
             <a
               href={cvPath}
-              target="_blank"
-              rel="noreferrer"
+              download="Muhammad_Musif_CV.docx"
               className="rounded-lg border border-cyan-500 px-6 py-3 font-semibold text-cyan-400 transition hover:bg-cyan-500 hover:text-black"
             >
               CV
@@ -329,6 +331,8 @@ function App() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
                   className="h-56 w-full object-cover"
                 />
 
@@ -516,8 +520,7 @@ function App() {
 
             <a
               href={cvPath}
-              target="_blank"
-              rel="noreferrer"
+              download="Muhammad_Musif_CV.docx"
               className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
             >
               CV

@@ -18,3 +18,5 @@ frontend/dist/
 
 # Screenshots temporary
 *.log
+build-log.txt
+bootstrap-portfolio.ps1
