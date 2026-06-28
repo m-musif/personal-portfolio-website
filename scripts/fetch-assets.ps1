@@ -39,4 +39,17 @@ foreach ($rel in $paths) {
     Write-Host "Copied $rel"
 }
 
+$localCv = Join-Path $Root "Muhammad_Musif_CV_Final.docx"
+$publicCv = Join-Path $Root "frontend\public\Muhammad_Musif_CV_Final.docx"
+if (Test-Path $localCv) {
+    Copy-Item $localCv $publicCv -Force
+    Write-Host "Synced Muhammad_Musif_CV_Final.docx to frontend/public"
+}
+
+$legacyResume = Join-Path $Root "frontend\public\Muhammad_Musif_RESUME.docx"
+if (Test-Path $legacyResume) {
+    Remove-Item $legacyResume -Force
+    Write-Host "Removed legacy Muhammad_Musif_RESUME.docx"
+}
+
 Write-Host "Asset fetch complete."

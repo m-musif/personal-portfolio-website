@@ -12,7 +12,7 @@ function formatDate(dateString) {
 }
 
 function App() {
-  const resumePath = `${import.meta.env.BASE_URL}Muhammad_Musif_RESUME.docx`;
+  const cvPath = `${import.meta.env.BASE_URL}Muhammad_Musif_CV_Final.docx`;
 
   const skillCategories = [
     {
@@ -199,12 +199,12 @@ function App() {
             </a>
 
             <a
-              href={resumePath}
+              href={cvPath}
               target="_blank"
               rel="noreferrer"
               className="rounded-lg border border-cyan-500 px-6 py-3 font-semibold text-cyan-400 transition hover:bg-cyan-500 hover:text-black"
             >
-              Resume
+              CV
             </a>
 
             <a
@@ -515,12 +515,12 @@ function App() {
             </a>
 
             <a
-              href={resumePath}
+              href={cvPath}
               target="_blank"
               rel="noreferrer"
               className="rounded-lg border border-slate-600 px-6 py-3 font-semibold transition hover:border-cyan-400"
             >
-              Resume
+              CV
             </a>
 
             <a

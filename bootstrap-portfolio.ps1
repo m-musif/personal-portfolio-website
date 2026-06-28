@@ -43,7 +43,7 @@ Ensure-Dir $CertDest
 $publicFiles = @(
   "frontend/public/favicon.svg",
   "frontend/public/icons.svg",
-  "frontend/public/Muhammad_Musif_RESUME.docx"
+  "frontend/public/Muhammad_Musif_CV_Final.docx"
 )
 foreach ($rel in $publicFiles) {
   $name = Split-Path $rel -Leaf
